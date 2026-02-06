@@ -1,4 +1,4 @@
-package com.bookeo.bookeo.endpoint.rest.controller;
+package com.bookeo.bookeo.endpoint.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
