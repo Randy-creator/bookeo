@@ -32,7 +32,7 @@ public class User {
     private String passwordHash;
 
     @Column(nullable = false)
-    private String role;
+    private Role role;
 
     @Column(nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
