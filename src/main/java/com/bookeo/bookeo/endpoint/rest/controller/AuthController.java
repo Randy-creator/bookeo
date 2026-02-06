@@ -1,5 +1,6 @@
 package com.bookeo.bookeo.endpoint.rest.controller;
 
+import com.bookeo.bookeo.models.Role;
 import com.bookeo.bookeo.models.User;
 import com.bookeo.bookeo.service.AuthService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class AuthController {
 
     @PostMapping("/register")
     public User register(@RequestParam String username, @RequestParam String password) {
-        return service.register(username, password, "USER");
+        return service.register(username, password, Role.USER);
     }
 
     @PostMapping("/login")

@@ -1,5 +1,6 @@
 package com.bookeo.bookeo.service;
 
+import com.bookeo.bookeo.models.Role;
 import com.bookeo.bookeo.models.User;
 import com.bookeo.bookeo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ public class AuthService {
     private final UserRepository userRepo;
     private final BCryptPasswordEncoder encoder = new  BCryptPasswordEncoder();
 
-    public User register(String username, String password, String role) {
+    public User register(String username, String password, Role role) {
         User user = User.builder()
                 .username(username)
                 .passwordHash(encoder.encode(password))
